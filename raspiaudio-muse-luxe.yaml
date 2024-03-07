@@ -31,7 +31,7 @@ captive_portal:
 improv_serial:
 
 external_components:
-  - source: github//RASPIAUDIO/components
+  - source: github://RASPIAUDIO/esphomeLuxe@main
     components: [es8388]
     refresh: 0s
 
