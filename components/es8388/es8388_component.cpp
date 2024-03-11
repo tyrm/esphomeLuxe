@@ -47,8 +47,8 @@ void ES8388Component::setup() {
     this->write_byte(29, 0x20);
  // ADC poweroff
    this->write_byte(3,0xFF);
-   // ADC micboost 21 dB
-   this->write_byte(9,0x77);   
+   // ADC micboost 0 dB
+   this->write_byte(9,0x00);   
 
    // LINPUT1/RINPUT1  
    this->write_byte(10,0x00);  
@@ -68,13 +68,13 @@ void ES8388Component::setup() {
    this->write_byte(16,0x00);
    this->write_byte(17,0x00);
 
-//ALC on PGA max Gain Max 23.5 dB Gain Min 0
-//   this->write_byte(18, 0xE2);
+//ALC on PGA max Gain Max 11.5 dB Gain Min 0
+   this->write_byte(18, 0xDA);
    //ALC Target 4.5dB hold time 0
-//   this->write_byte(19, 0xA0);
+   this->write_byte(19, 0xA0);
    //Decay time 820us Attack time 416 us
-//   this->write_byte(20, 0x12);  
-//   this->write_byte(21, 0x06);   
+   this->write_byte(20, 0x12);  
+   this->write_byte(21, 0x06);   
 
    // noise gate -76.5dB
   this->write_byte(22, 0x03);      
