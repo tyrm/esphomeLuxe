@@ -47,8 +47,8 @@ void ES8388Component::setup() {
     this->write_byte(29, 0x20);
  // ADC poweroff
    this->write_byte(3,0xFF);
-   // ADC micboost 0 dB
-   this->write_byte(9,0x00);   
+   // ADC micboost 6 dB
+   this->write_byte(9,0x22);   
 
    // LINPUT1/RINPUT1  
    this->write_byte(10,0x00);  
