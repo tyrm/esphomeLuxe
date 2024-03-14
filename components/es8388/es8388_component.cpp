@@ -47,8 +47,8 @@ void ES8388Component::setup() {
     this->write_byte(29, 0x20);
  // ADC poweroff
    this->write_byte(3,0xFF);
-   // ADC micboost 18 dB
-   this->write_byte(9,0x66);   
+   // ADC micboost 21 dB
+   this->write_byte(9,0x77);   
 
    // LINPUT1/RINPUT1  
    this->write_byte(10,0x00);  
@@ -59,7 +59,7 @@ void ES8388Component::setup() {
  //  ES8388_Write_Reg(11,0x02); 
 /////////////////////////////////////   
    //i2S 16b
-   this->write_byte(12,0x0C); 
+   this->write_byte(12,0x00); 
    //MCLK 256
    this->write_byte(13,0x02); 
    // ADC high pass filter
