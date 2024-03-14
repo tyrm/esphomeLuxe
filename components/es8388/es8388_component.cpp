@@ -59,7 +59,7 @@ void ES8388Component::setup() {
  //  ES8388_Write_Reg(11,0x02); 
 /////////////////////////////////////   
    //i2S 16b
-   this->write_byte(12,0x00); 
+   this->write_byte(12,0x0C); 
    //MCLK 256
    this->write_byte(13,0x02); 
    // ADC high pass filter
@@ -73,8 +73,8 @@ void ES8388Component::setup() {
    //ALC Target 4.5dB hold time 0
 //   this->write_byte(19, 0xA0);
    //Decay time 820us Attack time 416 us
-   this->write_byte(20, 0x12);  
-   this->write_byte(21, 0x06);   
+//   this->write_byte(20, 0x12);  
+//   this->write_byte(21, 0x06);   
 
    // noise gate -76.5dB
   this->write_byte(22, 0x03);      
